@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Projet Quoridor</h1>
+    <div id="quadrillage"></div>
+
+    <script>
+    function repet(compteur) {
+        let element = document.createElement('div');
+        element.id = 'carre'+compteur;
+        element.classList.add("carre");
+        document.querySelector("#quadrillage").appendChild(element);
+    }
+
+    for(i=0; i<81; i++) {
+       repet(i+1, 'blue');
+    }
+    </script>
+</body>
+
+</html>
