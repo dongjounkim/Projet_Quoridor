@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.carre {
+    width: 10%;
+    height: 10%;
+    background-color: aqua;
+}
+
+.petitcarre {
+    width: 1%;
+    height: 1%;
+    background-color: fuchsia;
+}
+
+.murver {
+    width: 1%;
+    height: 10%;
+    background-color: orange;
+}
+.murhor {
+    width: 10%;
+    height: 1%;
+    background-color: yellow;
+}
+
+#quadrillage {
+    margin: auto;
+    width: 50%;
+    height: 80%;
+    border: grey solid 2px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pion1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.pion2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: grey;
+}
+
