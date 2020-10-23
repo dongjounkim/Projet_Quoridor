@@ -22,6 +22,10 @@ h1 {
     background-color: #BABABA;
 }
 
+.carre:hover {
+    background-color: #FFFFFF;
+}
+
 .petitcarre {
     width: 5px;
     height: 5px;
