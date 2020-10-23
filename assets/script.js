@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	
+	//Creation du quadrillage
 	function creeunrectangle(classe) {
 		let element = document.createElement('div');
 		element.classList.add(classe);
@@ -18,14 +20,12 @@ $(document).ready(function () {
 		}
 	}
 
+
+	//Pion placés dès l'initialisation
 	$(".carre[data-col= 4][data-lig= 8]").append("<div class='pion1'></div>");
 	$(".carre[data-col= 4][data-lig= 0]").append("<div class='pion2'></div>");
 
-	// $(".carre").on('click', function () {
-	// 	$(".pion1").remove();
-	// 	$(this).append("<div class='pion1'></div>");
-	// });
-
+	//Fonctionalité de changement de joueur
 	var player_number = 1;
 
 	$('#quadrillage').on('click', '.carre', function (event) {
