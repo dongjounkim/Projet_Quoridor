@@ -53,15 +53,15 @@ h1 {
 }
 
 .pion1 {
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: blue;
 }
 
 .pion2 {
-    width: 100%;
-    height: 100%;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: red;
 }

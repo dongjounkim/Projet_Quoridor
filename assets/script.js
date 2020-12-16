@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	
+
 	//Creation du quadrillage
 	function creeunrectangle(classe) {
 		let element = document.createElement('div');
@@ -26,28 +26,28 @@ $(document).ready(function () {
 	$(".carre[data-col= 4][data-lig= 0]").append("<div class='pion2'></div>");
 
 	//Fonctionalité de changement de joueur
-	let player_number = 1;
+	var player_number = 0;
 
 	$('#quadrillage').on('click', '.carre', function (event) {
 		// Swap current player
-		if (player_number === 1) {
+		if (player_number === 0) {
 			$(".carre").on('click', function () {
-				
+
 				$(this).append("<div class='pion1'></div>");
-				
+
 			});
 			$(".pion1").remove();
-			player_number = 0;
+			player_number = nextPlayer(player_number);
 			console.log(player_number, "First");
 			console.log(this);
-		} else if (player_number === 0){
+		} else if (player_number === 1) {
 			$(".carre").on('click', function () {
-				
+
 				$(this).append("<div class='pion2'></div>");
-				
+
 			});
 			$(".pion2").remove();
-			player_number = 1;
+			player_number = nextPlayer(player_number);
 			console.log(player_number, 'second');
 			console.log(this);
 		}
@@ -55,13 +55,21 @@ $(document).ready(function () {
 
 
 	function nextPlayer(player_number) {
-		if(player_number == 0) {
-		  return player_number = 1;
+		if (player_number == 0) {
+			return player_number = 1;
 		} else {
-		  return player_number = 0;
+			return player_number = 0;
 		}
-	  }
-	
+	}
+
+	function getState(td) {
+		if (td.hasClass('pion1') || td.hasClass('pion2')) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
 	// $(".carre[data-col= 4][data-lig= 0]").append("<div class='pion2'></div>");
 	// $(".carre").on('click', function() {
 	//   $(".pion2").remove();
