@@ -26,27 +26,41 @@ $(document).ready(function () {
 	$(".carre[data-col= 4][data-lig= 0]").append("<div class='pion2'></div>");
 
 	//Fonctionalité de changement de joueur
-	var player_number = 1;
+	let player_number = 1;
 
 	$('#quadrillage').on('click', '.carre', function (event) {
 		// Swap current player
 		if (player_number === 1) {
 			$(".carre").on('click', function () {
-				$(".pion1").remove();
+				
 				$(this).append("<div class='pion1'></div>");
+				
 			});
+			$(".pion1").remove();
 			player_number = 0;
 			console.log(player_number, "First");
-		} else {
+			console.log(this);
+		} else if (player_number === 0){
 			$(".carre").on('click', function () {
-				$(".pion2").remove();
+				
 				$(this).append("<div class='pion2'></div>");
+				
 			});
+			$(".pion2").remove();
 			player_number = 1;
 			console.log(player_number, 'second');
+			console.log(this);
 		}
 	});
 
+
+	function nextPlayer(player_number) {
+		if(player_number == 0) {
+		  return player_number = 1;
+		} else {
+		  return player_number = 0;
+		}
+	  }
 	
 	// $(".carre[data-col= 4][data-lig= 0]").append("<div class='pion2'></div>");
 	// $(".carre").on('click', function() {
