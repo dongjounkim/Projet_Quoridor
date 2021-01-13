@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 auto;
+    color: white;
+    margin: 2% auto;
+}
+
+.carre {
+    width: 50px;
+    height: 50px;
+    background-color: #B0B0B0;
+}
+
+.carreho {
+    background-color: #FFFFFF;
+}
+
+.petitcarre {
+    width: 10px;
+    height: 10px;
+    background-color: #D9765F;
+}
+
+.murver {
+    width: 10px;
+    height: 50px;
+    background-color: #D9765F;
+}
+.murhor {
+    width: 50px;
+    height: 10px;
+    background-color: #D9765F;
+}
+
+.murhor:hover, .murver:hover{
+    background-color: #6E3C30;
+}
+
+#quadrillage {
+    margin: auto;
+    width: 536px;
+    height: 536px;
+    border: gray solid 3px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pion1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F28A2E;
+}
+
+.pion2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #303E8C;
+}
+
